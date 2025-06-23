@@ -61,9 +61,26 @@ def parse_distance(distance_str: str) -> float:
 
 def parse_hiking_time(time_str: str) -> Tuple[float, float]:
     """Parse hiking time range into min and max hours."""
+    # Handle "X-Y hours" format first
     match = re.search(r'(\d+(?:\.\d+)?)-(\d+(?:\.\d+)?)\s*hours', time_str)
     if match:
         return float(match.group(1)), float(match.group(2))
+    
+    # Handle "X days" format - convert to hours
+    days_match = re.search(r'(\d+(?:\.\d+)?)\s*days?', time_str)
+    if days_match:
+        days = float(days_match.group(1))
+        # Assume 8-12 hours of hiking per day for multi-day hikes
+        min_hours = days * 8
+        max_hours = days * 12
+        return min_hours, max_hours
+    
+    # Handle single hour values like "4 hours"
+    single_match = re.search(r'(\d+(?:\.\d+)?)\s*hours?', time_str)
+    if single_match:
+        hours = float(single_match.group(1))
+        return hours, hours
+    
     return 0.0, 0.0
 
 

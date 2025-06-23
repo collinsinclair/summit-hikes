@@ -121,7 +121,15 @@ function HikeCard({ hike }) {
       {/* GPS Coordinates */}
       {hike.latitude && hike.longitude && (
         <div className="gps-info">
-          <strong>Trailhead GPS:</strong> {hike.latitude.toFixed(6)}°, {hike.longitude.toFixed(6)}°
+          <strong>Trailhead GPS:</strong>{' '}
+          <a 
+            href={`https://www.google.com/maps/place/${hike.latitude},${hike.longitude}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="gps-link"
+          >
+            {hike.latitude.toFixed(6)}°, {hike.longitude.toFixed(6)}°
+          </a>
         </div>
       )}
     </div>
