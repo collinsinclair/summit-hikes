@@ -1,0 +1,163 @@
+.hike-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hike-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.hike-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.hike-name {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #2c3e50;
+  flex: 1;
+}
+
+.hike-header-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.overnight-badge {
+  background-color: #9b59b6;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.in-season-badge {
+  background-color: #27ae60;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Description */
+.hike-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #34495e;
+  margin-bottom: 1rem;
+}
+
+/* Stats grid */
+.hike-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #7f8c8d;
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.fourteener-badge {
+  display: inline-block;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
+/* Badges */
+.hike-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Difficulty badges */
+.difficulty-easy {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.difficulty-moderate {
+  background-color: #f39c12;
+  color: white;
+}
+
+.difficulty-hard {
+  background-color: #e67e22;
+  color: white;
+}
+
+.difficulty-extreme {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Other badges */
+.class-badge {
+  background-color: #3498db;
+  color: white;
+}
+
+.crowd-badge {
+  background-color: #95a5a6;
+  color: white;
+}
+
+/* Additional info */
+.peaks-info,
+.terrain-info,
+.gear-info,
+.gps-info,
+.season-info {
+  font-size: 0.9rem;
+  color: #34495e;
+  margin-top: 0.75rem;
+  line-height: 1.4;
+}
+
+.peaks-info strong,
+.terrain-info strong,
+.gear-info strong,
+.gps-info strong,
+.season-info strong {
+  color: #2c3e50;
+  font-weight: 600;
+}
